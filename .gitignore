@@ -3,6 +3,7 @@
 
 ### dotenv ###
 .env
+markiting/.env
 
 venv
 .venv
