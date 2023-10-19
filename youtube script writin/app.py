@@ -1,5 +1,8 @@
 import streamlit as st 
 from utils import generate_script
+import os 
+from dotenv import load_dotenv
+load_dotenv()
 
 # Applying Styling
 st.markdown("""
@@ -17,7 +20,8 @@ div.stButton > button:hover {
 
 # Creating Session State Variable
 if 'API_Key' not in st.session_state:
-    st.session_state['API_Key'] =''
+    # st.session_state['API_Key'] =''
+    st.session_state['API_Key'] = os.getenv("OPENAI_API_KEY")
 
 
 st.title('❤️ YouTube Script Writing Tool') 
