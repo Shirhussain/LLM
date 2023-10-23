@@ -27,7 +27,7 @@ def main():
             st.write("👉Creating embeddings instance done")
 
             # Build the vector store (Push the PDF data embeddings)
-            push_to_pinecone("e697b71c-d5ed-4c66-8625-ac1c403a2df1","us-west1-gcp-free","tickets",embeddings,docs_chunks)
+            push_to_pinecone("b937108b-05c8-4a66-89ce-98f9bd91d66f","gcp-starter","testbyme",embeddings,docs_chunks)
 
         st.success("Successfully pushed the embeddings to Pinecone")
 

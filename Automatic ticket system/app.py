@@ -25,7 +25,7 @@ def main():
         embeddings=create_embeddings()
 
         #Function to pull index data from Pinecone
-        index=pull_from_pinecone("e697b71c-d5ed-4c66-8625-ac1c403a2df1","us-west1-gcp-free","tickets",embeddings)
+        index=pull_from_pinecone("b937108b-05c8-4a66-89ce-98f9bd91d66f","gcp-starter","testbyme",embeddings)
         
         #This function will help us in fetching the top relevent documents from our vector store - Pinecone Index
         relavant_docs=get_similar_docs(index,user_input)
@@ -56,8 +56,6 @@ def main():
                 st.session_state['IT_tickets'].append(user_input)
             else:
                 st.session_state['Transport_tickets'].append(user_input)
-
-
 
 if __name__ == '__main__':
     main()

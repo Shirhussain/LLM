@@ -65,10 +65,11 @@ def create_embeddings(df,embeddings):
 
 #Splitting the data into train & test
 def split_train_test__data(df_sample):
+    # print(df_sample)
+    
     # Split into training and testing sets
     sentences_train, sentences_test, labels_train, labels_test = train_test_split(
     list(df_sample[2]), list(df_sample[1]), test_size=0.25, random_state=0)
-    print(len(sentences_train))
     return sentences_train, sentences_test, labels_train, labels_test
 
 #Get the accuracy score on test data
